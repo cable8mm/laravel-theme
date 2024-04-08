@@ -91,6 +91,10 @@
         <link rel="stylesheet" href="https://use.typekit.net/ins2wgm.css" />
 
         <script>
+            const alwaysLightMode = false;
+        </script>
+
+        <script>
             window
                 .matchMedia("(prefers-color-scheme: dark)")
                 .addEventListener("change", (e) => {
@@ -381,7 +385,6 @@
                                             >
                                         </li>
                                     </ul>
-
                                     <!-- doc.navigator.end -->
                                 </div>
                             </nav>
@@ -574,7 +577,99 @@
                             <div
                                 class="relative p-8 bg-white docs_sidebar dark:bg-dark-600"
                             >
-                                {!! $index !!}
+                                <!-- doc.navigator.start -->
+                                <ul>
+                                    <li>
+                                        <h2>Prologue</h2>
+                                        <ul>
+                                            <li>
+                                                <a href="/docs/10.x/releases"
+                                                    >Release Notes</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="/docs/10.x/upgrade"
+                                                    >Upgrade Guide</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="/docs/10.x/contributions"
+                                                    >Contribution Guide</a
+                                                >
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="sub--on">
+                                        <h2>Getting Started</h2>
+                                        <ul>
+                                            <li class="active">
+                                                <a
+                                                    href="/docs/10.x/installation"
+                                                    >Installation</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="/docs/10.x/configuration"
+                                                    >Configuration</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="/docs/10.x/structure"
+                                                    >Directory Structure</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="/docs/10.x/frontend"
+                                                    >Frontend</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="/docs/10.x/starter-kits"
+                                                    >Starter Kits</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="/docs/10.x/deployment"
+                                                    >Deployment</a
+                                                >
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h2>Architecture Concepts</h2>
+                                        <ul>
+                                            <li>
+                                                <a href="/docs/10.x/lifecycle"
+                                                    >Request Lifecycle</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="/docs/10.x/container"
+                                                    >Service Container</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="/docs/10.x/providers"
+                                                    >Service Providers</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="/docs/10.x/facades"
+                                                    >Facades</a
+                                                >
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="/api/10.x"
+                                            >API Documentation</a
+                                        >
+                                    </li>
+                                </ul>
+                                <!-- doc.navigator.end -->
                             </div>
                         </nav>
                     </div>
@@ -846,7 +941,6 @@
                                             >!
                                         </p>
                                     </blockquote>
-                                    <p><a name="usage"></a></p>
                                     <!-- doc.content.end -->
                                 </div>
                             </section>

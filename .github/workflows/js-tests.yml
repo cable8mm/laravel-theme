@@ -2,13 +2,9 @@ name: js-tests
 
 on:
   workflow_call:
-    inputs:
-      node:
-        default: "16"
-        type: string
-      cmd:
-        default: "build"
-        type: string
+  push:
+    branches-ignore:
+      - "dependabot/npm_and_yarn/*"
 
 jobs:
   compile:
@@ -20,10 +16,10 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: ${{ inputs.node }}
+          node-version: "20"
 
       - name: Install NPM dependencies
         run: npm ci
 
       - name: Compile assets
-        run: npm run ${{ inputs.cmd }}
+        run: npm run build

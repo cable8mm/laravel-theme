@@ -1,12 +1,12 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
-@import "./_typography.css";
-@import "./_code.css";
-@import "./_sidebar_layout.css";
-@import "./_search.css";
-@import "./_docs.css";
-@import "./_accessibility.css";
 @import 'tailwindcss/utilities';
+@import "./_typography.css";
+@import "./_sidebar_layout.css";
+@import "./_docs.css";
+@import "./_search.css";
+@import "./_code.css";
+@import "./_accessibility.css";
 @import "./_dark_mode.css";
 
 [x-cloak] {

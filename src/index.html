@@ -804,143 +804,106 @@
 
                         <section class="mt-8 md:mt-16">
                             <section class="docs_main max-w-prose">
-                                <blockquote>
-                                    <div class="callout">
-                                        <div
-                                            class="mb-10 max-w-2xl mx-auto px-4 py-8 shadow-lg dark:bg-dark-600 lg:flex lg:items-center"
-                                        >
-                                            <div
-                                                class="w-20 h-20 mb-6 flex items-center justify-center shrink-0 bg-orange-600 lg:mb-0"
-                                            >
-                                                <img
-                                                    src="/img/callouts/exclamation.min.svg"
-                                                    alt="Icon"
-                                                    class="opacity-75"
-                                                />
-                                            </div>
-
-                                            <p class="mb-0 lg:ml-4">
-                                                <strong>WARNING</strong> You're
-                                                browsing the documentation for
-                                                an old version of Laravel.
-                                                Consider upgrading your project
-                                                to Laravel 11.x
-                                                <!-- <a
-                                                    href="{{ route('docs.version', DEFAULT_VERSION) }}"
-                                                    >Laravel {{ DEFAULT_VERSION
-                                                    }}</a> -->.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </blockquote>
-
-                                <blockquote>
-                                    <div class="callout">
-                                        <div
-                                            class="mb-10 max-w-2xl mx-auto px-4 py-8 shadow-lg lg:flex lg:items-center"
-                                        >
-                                            <div
-                                                class="w-20 h-20 mb-6 flex items-center justify-center shrink-0 bg-orange-600 lg:mb-0"
-                                            >
-                                                <img
-                                                    src="/img/callouts/exclamation.min.svg"
-                                                    alt="Icon"
-                                                    class="opacity-75"
-                                                />
-                                            </div>
-
-                                            <p class="mb-0 lg:ml-4">
-                                                <strong>WARNING</strong> You're
-                                                browsing the documentation for
-                                                an upcoming version of Laravel.
-                                                The documentation and features
-                                                of this release are subject to
-                                                change.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </blockquote>
-
-                                <div id="main-content">
+                                <p id="main-content">
                                     <!-- doc.content.start -->
-                                    <h1>Artisan Console</h1>
-                                    <p><a name="introduction"></a></p>
-                                    <h2>Introduction</h2>
-                                    <p>
-                                        Artisan is the command line interface
-                                        included with Laravel. Artisan exists at
-                                        the root of your application as the
-                                        <code>artisan</code> script and provides
-                                        a number of helpful commands that can
-                                        assist you while you build your
-                                        application. To view a list of all
-                                        available Artisan commands, you may use
-                                        the <code>list</code> command:
-                                    </p>
-                                    <div class="code-container">
-                                        <pre><code data-theme="olaolu-palenight" data-lang="shell" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">php </span><span style="color: #BFC7D5;">artisan</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">list</span></div></code></pre>
-                                    </div>
-                                    <p>
-                                        Every command also includes a
-                                        &quot;help&quot; screen which displays
-                                        and describes the command's available
-                                        arguments and options. To view a help
-                                        screen, precede the name of the command
-                                        with <code>help</code>:
-                                    </p>
-                                    <div class="code-container">
-                                        <pre><code data-theme="olaolu-palenight" data-lang="shell" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">php </span><span style="color: #BFC7D5;">artisan</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">help</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">migrate</span></div></code></pre>
-                                    </div>
-                                    <p><a name="laravel-sail"></a></p>
-                                    <h4>Laravel Sail</h4>
-                                    <p>
-                                        If you are using
-                                        <a href="/11.x/sail">Laravel Sail</a> as
-                                        your local development environment,
-                                        remember to use the
-                                        <code>sail</code> command line to invoke
-                                        Artisan commands. Sail will execute your
-                                        Artisan commands within your
-                                        application's Docker containers:
-                                    </p>
-                                    <div class="code-container">
-                                        <pre><code data-theme="olaolu-palenight" data-lang="shell" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">./vendor/bin/sail </span><span style="color: #BFC7D5;">artisan</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">list</span></div></code></pre>
-                                    </div>
-                                    <p><a name="tinker"></a></p>
-                                    <h3>Tinker (REPL)</h3>
-                                    <p>
-                                        Laravel Tinker is a powerful REPL for
-                                        the Laravel framework, powered by the
-                                        <a
-                                            href="https://github.com/bobthecow/psysh"
-                                            >PsySH</a
-                                        >
-                                        package.
-                                    </p>
-                                    <p><a name="installation"></a></p>
-                                    <h4>Installation</h4>
-                                    <p>
-                                        All Laravel applications include Tinker
-                                        by default. However, you may install
-                                        Tinker using Composer if you have
-                                        previously removed it from your
-                                        application:
-                                    </p>
-                                    <div class="code-container">
-                                        <pre><code data-theme="olaolu-palenight" data-lang="shell" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">composer </span><span style="color: #BFC7D5;">require</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">laravel/tinker</span></div></code></pre>
-                                    </div>
+                                    <h1>Title</h1>
+
+                                    <p><a name="alert"></a></p>
+                                    <h2>Alert</h2>
+
                                     <blockquote>
                                         <p>
                                             [!NOTE]<br />
-                                            Looking for hot reloading, multiline
-                                            code editing, and autocompletion
-                                            when interacting with your Laravel
-                                            application? Check out
-                                            <a href="https://tinkerwell.app"
-                                                >Tinkerwell</a
-                                            >!
+                                            Before getting started, be sure to
+                                            configure a database connection in
+                                            your application's
+                                            <code>config/database.php</code>
+                                            configuration file.
                                         </p>
                                     </blockquote>
+
+                                    <blockquote>
+                                        <p>
+                                            [!WARNING]<br />
+                                            This is a WARNING.
+                                        </p>
+                                    </blockquote>
+
+                                    <p><a name="introduction"></a></p>
+                                    <h2>Code</h2>
+                                    <p>
+                                        Artisan exists at the root of your
+                                        application as the
+                                        <code>artisan</code> script and provides
+                                        a number of helpful commands that can
+                                        assist you while you build your
+                                        application:
+                                    </p>
+                                    <p>Shell:</p>
+                                    <div class="code-container">
+                                        <pre><code data-theme="olaolu-palenight" data-lang="shell" class="torchlight" style="background-color: #292D3E; --theme-selection-background: #7580B850;" id="clipText-12"><!-- Syntax highlighted by torchlight.dev --><div class="line"><span style="color: #697098;">#</span><span style="color: #697098;"> Running Artisan commands locally...</span></div><div class="line"><span style="color: #BFC7D5;">php </span><span style="color: #BFC7D5;">artisan</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">queue:work</span></div><div class="line">&nbsp;</div><div class="line"><span style="color: #697098;">#</span><span style="color: #697098;"> Running Artisan commands within Laravel Sail...</span></div><div class="line"><span style="color: #BFC7D5;">sail </span><span style="color: #BFC7D5;">artisan</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">queue:work</span></div></code></pre>
+                                    </div>
+                                    <p>.env:</p>
+                                    <div class="code-container">
+                                        <pre><code data-theme="olaolu-palenight" data-lang="ini" class="torchlight" style="background-color: #292D3E; --theme-selection-background: #7580B850;" id="clipText-19"><!-- Syntax highlighted by torchlight.dev --><div class="line"><span style="color: #C792EA;">TYPESENSE_HOST</span><span style="color: #BFC7D5;">=typesense</span></div><div class="line"><span style="color: #C792EA;">TYPESENSE_PORT</span><span style="color: #BFC7D5;">=8108</span></div><div class="line"><span style="color: #C792EA;">TYPESENSE_PROTOCOL</span><span style="color: #BFC7D5;">=http</span></div><div class="line"><span style="color: #C792EA;">TYPESENSE_API_KEY</span><span style="color: #BFC7D5;">=xyz</span></div></code></pre>
+                                    </div>
+                                    <p>yml:</p>
+                                    <div class="code-container">
+                                        <pre><code data-theme="olaolu-palenight" data-lang="yaml" class="torchlight" style="background-color: #292D3E; --theme-selection-background: #7580B850;" id="clipText-25"><!-- Syntax highlighted by torchlight.dev --><div class="line"><span style="color: #89DDFF;">selenium</span><span style="color: #BFC7D5;">:</span></div><div class="line"><span style="color: #BFC7D5;">    </span><span style="color: #89DDFF;">image</span><span style="color: #BFC7D5;">: </span><span style="color: #D9F5DD;">'</span><span style="color: #C3E88D;">selenium/standalone-chrome</span><span style="color: #D9F5DD;">'</span></div><div class="line"><span style="color: #BFC7D5;">    </span><span style="color: #89DDFF;">extra_hosts</span><span style="color: #BFC7D5;">:</span></div><div class="line"><span style="color: #BFC7D5;">      - </span><span style="color: #D9F5DD;">'</span><span style="color: #C3E88D;">host.docker.internal:host-gateway</span><span style="color: #D9F5DD;">'</span></div><div class="line"><span style="color: #BFC7D5;">    </span><span style="color: #89DDFF;">volumes</span><span style="color: #BFC7D5;">:</span></div><div class="line"><span style="color: #BFC7D5;">        - </span><span style="color: #D9F5DD;">'</span><span style="color: #C3E88D;">/dev/shm:/dev/shm</span><span style="color: #D9F5DD;">'</span></div><div class="line"><span style="color: #BFC7D5;">    </span><span style="color: #89DDFF;">networks</span><span style="color: #BFC7D5;">:</span></div><div class="line"><span style="color: #BFC7D5;">        - </span><span style="color: #BFC7D5;">sail</span></div></code></pre>
+                                    </div>
+                                    <p>json:</p>
+                                    <div class="code-container">
+                                        <pre><code data-theme="olaolu-palenight" data-lang="json" class="torchlight" style="background-color: #292D3E; --theme-selection-background: #7580B850;" id="clipText-11"><!-- Syntax highlighted by torchlight.dev --><div class="line"><span style="color: #BFC7D5;">{</span></div><div class="line"><span style="color: #BFC7D5;">    </span><span style="color: #C3E88D;">"exclude"</span><span style="color: #BFC7D5;">: [</span></div><div class="line"><span style="color: #BFC7D5;">        </span><span style="color: #D9F5DD;">"</span><span style="color: #80CBC4;">my-specific/folder</span><span style="color: #D9F5DD;">"</span></div><div class="line"><span style="color: #BFC7D5;">    ]</span></div><div class="line"><span style="color: #BFC7D5;">}</span></div></code></pre>
+                                    </div>
+                                    <p>PHP:</p>
+                                    <div class="code-container">
+                                        <pre><code data-theme="olaolu-palenight" data-lang="php" class="torchlight" style="background-color: #292D3E; --theme-selection-background: #7580B850;" id="clipText-2"><!-- Syntax highlighted by torchlight.dev --><div class="line"><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">withMiddleware</span><span style="color: #BFC7D5;">(</span><span style="color: #C792EA;">function</span><span style="color: #BFC7D5;"> </span><span style="color: #D9F5DD;">(</span><span style="color: #FFCB8B;">Middleware</span><span style="color: #BFC7D5;"> </span><span style="color: #BEC5D4;">$middleware</span><span style="color: #D9F5DD;">)</span><span style="color: #BFC7D5;"> {</span></div><div class="line"><span style="color: #BFC7D5;">    </span><span style="color: #BEC5D4;">$middleware</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">validateCsrfTokens</span><span style="color: #BFC7D5;">(</span></div><div class="line"><span style="color: #BFC7D5;">        except: [</span><span style="color: #D9F5DD;">'</span><span style="color: #C3E88D;">stripe/*</span><span style="color: #D9F5DD;">'</span><span style="color: #BFC7D5;">]</span></div><div class="line"><span style="color: #BFC7D5;">    );</span></div><div class="line">&nbsp;</div><div class="line"><span style="color: #BFC7D5;">    </span><span style="color: #BEC5D4;">$middleware</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">web</span><span style="color: #BFC7D5;">(append: [</span></div><div class="line"><span style="color: #BFC7D5;">        </span><span style="color: #FFCB8B;">EnsureUserIsSubscribed</span><span style="color: #89DDFF;">::</span><span style="color: #C792EA;">class</span><span style="color: #BFC7D5;">,</span></div><div class="line"><span style="color: #BFC7D5;">    ])</span></div><div class="line"><span style="color: #BFC7D5;">})</span></div></code></pre>
+                                    </div>
+                                    <p>Javascript:</p>
+                                    <div class="code-container">
+                                        <pre><code data-theme="olaolu-palenight" data-lang="js" class="torchlight" style="background-color: #292D3E; --theme-selection-background: #7580B850;" id="clipText-15"><!-- Syntax highlighted by torchlight.dev --><div class="line"><span style="color: #C792EA;">import</span><span style="color: #BFC7D5;"> { defineConfig } </span><span style="color: #C792EA;">from</span><span style="color: #BFC7D5;"> </span><span style="color: #D9F5DD;">'</span><span style="color: #C3E88D;">vite</span><span style="color: #D9F5DD;">'</span><span style="color: #BFC7D5;">;</span></div><div class="line"><span style="color: #C792EA;">import</span><span style="color: #BFC7D5;"> laravel </span><span style="color: #C792EA;">from</span><span style="color: #BFC7D5;"> </span><span style="color: #D9F5DD;">'</span><span style="color: #C3E88D;">laravel-vite-plugin</span><span style="color: #D9F5DD;">'</span><span style="color: #BFC7D5;">;</span></div><div class="line">&nbsp;</div><div class="line"><span style="color: #C792EA;">export</span><span style="color: #BFC7D5;"> </span><span style="color: #C792EA;">default</span><span style="color: #BFC7D5;"> </span><span style="color: #82AAFF;">defineConfig</span><span style="color: #BFC7D5;">({</span></div><div class="line"><span style="color: #BFC7D5;">    plugins: [</span></div><div class="line"><span style="color: #BFC7D5;">        </span><span style="color: #82AAFF;">laravel</span><span style="color: #BFC7D5;">([</span><span style="color: #D9F5DD;">'</span><span style="color: #C3E88D;">resources/ts/app.tsx</span><span style="color: #D9F5DD;">'</span><span style="color: #BFC7D5;">]),</span></div><div class="line"><span style="color: #BFC7D5;">    ],</span></div><div class="line"><span style="color: #BFC7D5;">    resolve: {</span></div><div class="line"><span style="color: #BFC7D5;">        alias: {</span></div><div class="line"><span style="color: #BFC7D5;">            </span><span style="color: #D9F5DD;">'</span><span style="color: #C3E88D;">@</span><span style="color: #D9F5DD;">'</span><span style="color: #BFC7D5;">: </span><span style="color: #D9F5DD;">'</span><span style="color: #C3E88D;">/resources/ts</span><span style="color: #D9F5DD;">'</span><span style="color: #BFC7D5;">,</span></div><div class="line"><span style="color: #BFC7D5;">        },</span></div><div class="line"><span style="color: #BFC7D5;">    },</span></div><div class="line"><span style="color: #BFC7D5;">});</span></div></code></pre>
+                                    </div>
+                                    <p>Group:</p>
+                                    <div class="code-container">
+                                        <div
+                                            class="tabbed-code"
+                                            data-group="f86d679141246e9825a8f6c067a5f5a8"
+                                        >
+                                            <div class="tabbed-code-nav">
+                                                <button
+                                                    class="tabbed-code-nav-button active"
+                                                    data-tab="Vue"
+                                                    onClick="setTab('Vue', 'f86d679141246e9825a8f6c067a5f5a8')"
+                                                >
+                                                    Vue
+                                                </button>
+                                                <button
+                                                    class="tabbed-code-nav-button"
+                                                    data-tab="React"
+                                                    onClick="setTab('React', 'f86d679141246e9825a8f6c067a5f5a8')"
+                                                >
+                                                    React
+                                                </button>
+                                            </div>
+                                            <div class="tabbed-code-body">
+                                                <div
+                                                    class="code-container active"
+                                                    data-tab="Vue"
+                                                >
+                                                    <pre><code class="language-vue">//
+                                            </code></pre>
+                                                </div>
+                                                <div
+                                                    class="code-container"
+                                                    data-tab="React"
+                                                >
+                                                    <pre><code class="language-javascript">//
+                                            </code></pre>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                     <!-- doc.content.end -->
                                 </div>
                             </section>
@@ -1221,6 +1184,6 @@
         <div class="fixed">
             <input type="text" />
         </div>
-        <script type="module" src="./js/app.js"></script>
+        <script type="module" src="./js/app.js" defer></script>
     </body>
 </html>

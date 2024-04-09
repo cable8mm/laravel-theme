@@ -24,7 +24,6 @@ codeBlocks.forEach((element, key) => {
 
     copyToClipboardBtn.innerHTML = clipboardIcon
     copyToClipboardBtn.id = `clipButton-${key}`
-
     ;['md:block', 'hidden'].forEach(value => {
         copyToClipboardBtn.classList.add(value)
     })

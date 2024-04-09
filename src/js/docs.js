@@ -1,7 +1,7 @@
 import Prism from 'prismjs'
 Prism.manual = true
 
-highlightCode()
+//highlightCode()
 wrapHeadingsInAnchors()
 setupNavCurrentLinkHandling()
 replaceBlockquotesWithCalloutsInDocs()

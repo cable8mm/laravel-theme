@@ -4,6 +4,7 @@ import Alpine from 'alpinejs'
 import Focus from '@alpinejs/focus'
 
 import './clipboard'
+import './tabbed_code'
 import './components/search'
 
 window.Alpine = Alpine

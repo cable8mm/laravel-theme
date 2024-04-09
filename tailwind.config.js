@@ -37,7 +37,7 @@ const accentColors = {
 }
 
 export default {
-    content: ['./src/**/*.{css,js}', './src/index.html'],
+    content: ['./src/js/*.js', './src/js/**/*.js', './src/index.html'],
     darkMode: 'class',
     theme: {
         extend: {

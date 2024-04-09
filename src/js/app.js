@@ -12,9 +12,9 @@ Alpine.plugin(Focus)
 Alpine.start()
 
 document.addEventListener('DOMContentLoaded', () => {
-    if (document.querySelector('#docsScreen')) {
-        import('./docs.js')
-    }
+  if (document.querySelector('#docsScreen')) {
+    import('./docs.js')
+  }
 
-    import('./components/accessibility')
+  import('./components/accessibility')
 })

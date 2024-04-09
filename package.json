@@ -9,7 +9,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest",
-    "lint": "eslint src/ --fix"
+    "fix": "eslint src/ --fix --ext .js,.jsx,.ts,.tsx",
+    "lint": "eslint src/ --ext .js,.jsx,.ts,.tsx"
   },
   "devDependencies": {
     "@alpinejs/focus": "^3.9.6",

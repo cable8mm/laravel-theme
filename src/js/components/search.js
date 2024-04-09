@@ -1,4 +1,4 @@
-import docsearch from '@docsearch/js';
+import docsearch from '@docsearch/js'
 
 docsearch({
     container: '#docsearch',
@@ -6,6 +6,6 @@ docsearch({
     apiKey: algolia_search_key,
     indexName: 'laravel',
     searchParameters: {
-        facetFilters: ['version:' + window.version],
-    },
-});
+        facetFilters: ['version:' + window.version]
+    }
+})

@@ -1,5 +1,9 @@
 # Laravel theme for Document2
 
+[![js-tests](https://github.com/cable8mm/laravel-theme/actions/workflows/js-tests.yml/badge.svg)](https://github.com/cable8mm/laravel-theme/actions/workflows/js-tests.yml)
+![GitHub Release](https://img.shields.io/github/v/release/cable8mm/laravel-theme)
+![GitHub License](https://img.shields.io/github/license/cable8mm/Laravel-theme)
+
 This is the official laravel theme for [Document2](https://github.com/cable8m/document2).
 
 ## Features

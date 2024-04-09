@@ -1,5 +1,13 @@
 # Release Notes
 
+## v1.1.0 - 2024-04-09
+
+### What's Changed
+
+* Engineered for Vite-style rapid development by [@cable8mm](https://github.com/cable8mm) in https://github.com/cable8mm/laravel-theme/pull/7
+
+**Full Changelog**: https://github.com/cable8mm/laravel-theme/compare/v1.0.0...v1.1.0
+
 ## v1.0.0 - 2024-04-09
 
 ### What's Changed

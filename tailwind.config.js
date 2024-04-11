@@ -11,7 +11,7 @@ const accentColors = {
   lumen: '#F6AE7A',
   homestead: '#E7801C',
   spark: '#9B8BFB',
-    valet: '#5E47CD',
+  valet: '#5E47CD',
   mix: '#294BA5',
   cashier: '#91D630',
   dusk: '#BB358B',

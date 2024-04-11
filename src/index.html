@@ -14,9 +14,7 @@
     <link rel="canonical" href="{{ canonical }}" />
 
     <!-- Primary Meta Tags -->
-    <meta
-      name="title"
-      content="Laravel - The PHP Framework For Web Artisans" />
+    <meta name="title" content="Laravel - The PHP Framework For Web Artisans" />
     <meta
       name="description"
       content="Laravel is a PHP web application framework with expressive, elegant syntax. We’ve already laid the foundation — freeing you to create without sweating the small things." />
@@ -79,114 +77,84 @@
     <link rel="stylesheet" href="https://use.typekit.net/ins2wgm.css" />
 
     <script>
-            const alwaysLightMode = false;
-        </script>
+      const alwaysLightMode = false;
+    </script>
 
     <script>
-            window
-                .matchMedia("(prefers-color-scheme: dark)")
-                .addEventListener("change", (e) => {
-                    if (localStorage.theme === "system") {
-                        if (e.matches) {
-                            document.documentElement.classList.add("dark");
-                            document.documentElement.setAttribute(
-                                "data-theme",
-                                "dark"
-                            );
-                        } else {
-                            document.documentElement.classList.remove("dark");
-                            document.documentElement.setAttribute(
-                                "data-theme",
-                                "light"
-                            );
-                        }
-                    }
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", (e) => {
+          if (localStorage.theme === "system") {
+            if (e.matches) {
+              document.documentElement.classList.add("dark");
+              document.documentElement.setAttribute("data-theme", "dark");
+            } else {
+              document.documentElement.classList.remove("dark");
+              document.documentElement.setAttribute("data-theme", "light");
+            }
+          }
 
-                    updateThemeAndSchemeColor();
-                });
+          updateThemeAndSchemeColor();
+        });
 
-            function updateTheme() {
-                if (!("theme" in localStorage)) {
-                    localStorage.theme = "system";
-                }
+      function updateTheme() {
+        if (!("theme" in localStorage)) {
+          localStorage.theme = "system";
+        }
 
-                switch (localStorage.theme) {
-                    case "system":
-                        if (
-                            window.matchMedia("(prefers-color-scheme: dark)")
-                                .matches
-                        ) {
-                            document.documentElement.classList.add("dark");
-                            document.documentElement.setAttribute(
-                                "data-theme",
-                                "dark"
-                            );
-                        } else {
-                            document.documentElement.classList.remove("dark");
-                            document.documentElement.setAttribute(
-                                "data-theme",
-                                "light"
-                            );
-                        }
-
-                        document.documentElement.setAttribute(
-                            "color-theme",
-                            "system"
-                        );
-                        break;
-
-                    case "dark":
-                        document.documentElement.classList.add("dark");
-                        document.documentElement.setAttribute(
-                            "color-theme",
-                            "dark"
-                        );
-                        document.documentElement.setAttribute(
-                            "data-theme",
-                            "dark"
-                        );
-                        break;
-
-                    case "light":
-                        document.documentElement.classList.remove("dark");
-                        document.documentElement.setAttribute(
-                            "color-theme",
-                            "light"
-                        );
-                        document.documentElement.setAttribute(
-                            "data-theme",
-                            "light"
-                        );
-                        break;
-                }
-
-                updateThemeAndSchemeColor();
+        switch (localStorage.theme) {
+          case "system":
+            if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+              document.documentElement.classList.add("dark");
+              document.documentElement.setAttribute("data-theme", "dark");
+            } else {
+              document.documentElement.classList.remove("dark");
+              document.documentElement.setAttribute("data-theme", "light");
             }
 
-            function updateThemeAndSchemeColor() {
-                if (!alwaysLightMode) {
-                    if (document.documentElement.classList.contains("dark")) {
-                        document
-                            .querySelector('meta[name="color-scheme"]')
-                            .setAttribute("content", "dark");
-                        document
-                            .querySelector('meta[name="theme-color"]')
-                            .setAttribute("content", "#171923");
+            document.documentElement.setAttribute("color-theme", "system");
+            break;
 
-                        return;
-                    }
+          case "dark":
+            document.documentElement.classList.add("dark");
+            document.documentElement.setAttribute("color-theme", "dark");
+            document.documentElement.setAttribute("data-theme", "dark");
+            break;
 
-                    document
-                        .querySelector('meta[name="color-scheme"]')
-                        .setAttribute("content", "light");
-                    document
-                        .querySelector('meta[name="theme-color"]')
-                        .setAttribute("content", "#ffffff");
-                }
-            }
+          case "light":
+            document.documentElement.classList.remove("dark");
+            document.documentElement.setAttribute("color-theme", "light");
+            document.documentElement.setAttribute("data-theme", "light");
+            break;
+        }
 
-            updateTheme();
-        </script>
+        updateThemeAndSchemeColor();
+      }
+
+      function updateThemeAndSchemeColor() {
+        if (!alwaysLightMode) {
+          if (document.documentElement.classList.contains("dark")) {
+            document
+              .querySelector('meta[name="color-scheme"]')
+              .setAttribute("content", "dark");
+            document
+              .querySelector('meta[name="theme-color"]')
+              .setAttribute("content", "#171923");
+
+            return;
+          }
+
+          document
+            .querySelector('meta[name="color-scheme"]')
+            .setAttribute("content", "light");
+          document
+            .querySelector('meta[name="theme-color"]')
+            .setAttribute("content", "#ffffff");
+        }
+      }
+
+      updateTheme();
+    </script>
   </head>
   <body
     x-data="{
@@ -225,8 +193,7 @@
       </div>
 
       <div class="mt-px ml-1">
-        On macOS? Get started with PHP and Laravel faster than ever
-        using
+        On macOS? Get started with PHP and Laravel faster than ever using
         <a href="https://herd.laravel.com" class="underline">Laravel Herd</a>.
       </div>
     </div>
@@ -238,9 +205,7 @@
         <aside
           class="hidden fixed top-0 bottom-0 left-0 z-20 h-full w-16 bg-gradient-to-b from-gray-100 to-white transition-all duration-300 overflow-hidden lg:sticky lg:w-80 lg:shrink-0 lg:flex lg:flex-col lg:justify-end lg:items-end 2xl:max-w-lg 2xl:w-full dark:from-dark-800 dark:to-dark-700">
           <div class="relative min-h-0 flex-1 flex flex-col xl:w-80">
-            <a
-              href="/"
-              class="flex items-center py-8 px-4 lg:px-8 xl:px-16">
+            <a href="/" class="flex items-center py-8 px-4 lg:px-8 xl:px-16">
               <img
                 class="w-8 h-8 shrink-0 transition-all duration-300 lg:w-12 lg:h-12"
                 src="/img/logomark.min.svg"
@@ -256,9 +221,7 @@
             </a>
             <div
               class="overflow-y-auto overflow-x-hidden px-4 lg:overflow-hidden lg:px-8 xl:px-16">
-              <nav
-                id="indexed-nav"
-                class="hidden lg:block lg:mt-4">
+              <nav id="indexed-nav" class="hidden lg:block lg:mt-4">
                 <div class="docs_sidebar">
                   <!-- doc.navigator.start -->
                   <ul>
@@ -266,15 +229,13 @@
                       <h2>Prologue</h2>
                       <ul>
                         <li>
-                          <a
-                            href="/docs/10.x/releases">Release Notes</a>
+                          <a href="/docs/10.x/releases">Release Notes</a>
                         </li>
                         <li>
                           <a href="/docs/10.x/upgrade">Upgrade Guide</a>
                         </li>
                         <li>
-                          <a
-                            href="/docs/10.x/contributions">Contribution
+                          <a href="/docs/10.x/contributions">Contribution
                             Guide</a>
                         </li>
                       </ul>
@@ -283,28 +244,22 @@
                       <h2>Getting Started</h2>
                       <ul>
                         <li class="active">
-                          <a
-                            href="/docs/10.x/installation">Installation</a>
+                          <a href="/docs/10.x/installation">Installation</a>
                         </li>
                         <li>
-                          <a
-                            href="/docs/10.x/configuration">Configuration</a>
+                          <a href="/docs/10.x/configuration">Configuration</a>
                         </li>
                         <li>
-                          <a
-                            href="/docs/10.x/structure">Directory Structure</a>
+                          <a href="/docs/10.x/structure">Directory Structure</a>
                         </li>
                         <li>
-                          <a
-                            href="/docs/10.x/frontend">Frontend</a>
+                          <a href="/docs/10.x/frontend">Frontend</a>
                         </li>
                         <li>
-                          <a
-                            href="/docs/10.x/starter-kits">Starter Kits</a>
+                          <a href="/docs/10.x/starter-kits">Starter Kits</a>
                         </li>
                         <li>
-                          <a
-                            href="/docs/10.x/deployment">Deployment</a>
+                          <a href="/docs/10.x/deployment">Deployment</a>
                         </li>
                       </ul>
                     </li>
@@ -312,16 +267,13 @@
                       <h2>Architecture Concepts</h2>
                       <ul>
                         <li>
-                          <a
-                            href="/docs/10.x/lifecycle">Request Lifecycle</a>
+                          <a href="/docs/10.x/lifecycle">Request Lifecycle</a>
                         </li>
                         <li>
-                          <a
-                            href="/docs/10.x/container">Service Container</a>
+                          <a href="/docs/10.x/container">Service Container</a>
                         </li>
                         <li>
-                          <a
-                            href="/docs/10.x/providers">Service Providers</a>
+                          <a href="/docs/10.x/providers">Service Providers</a>
                         </li>
                         <li>
                           <a href="/docs/10.x/facades">Facades</a>
@@ -338,8 +290,8 @@
               <div
                 class="mt-4 px-3 py-2 border-dashed border-gray-200 border rounded-lg text-xs leading-loose text-gray-700 lg:block dark:border-gray-400 dark:text-gray-200">
                 <span class="font-medium">Document2:</span>
-                Do you have a headache for creating
-                documentation? Write markdown, and done it.
+                Do you have a headache for creating documentation? Write
+                markdown, and done it.
                 <a
                   class="underline text-red-600"
                   href="https://github.com/cable8mm/document2">Keep in
@@ -358,10 +310,7 @@
             <div
               class="mx-auto px-8 sm:px-16 flex items-center justify-between">
               <a href="/" class="flex items-center">
-                <img
-                  class
-                  src="/img/logomark.min.svg"
-                  alt="Laravel" />
+                <img class src="/img/logomark.min.svg" alt="Laravel" />
                 <img
                   class="hidden ml-5 sm:block"
                   src="/img/logotype.min.svg"
@@ -384,10 +333,7 @@
                     fill="none"
                     stroke-linecap="round"
                     stroke-linejoin="round">
-                    <path
-                      stroke="none"
-                      d="M0 0h24v24H0z"
-                      fill="none"></path>
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                     <circle cx="12" cy="12" r="4"></circle>
                     <path
                       d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
@@ -398,9 +344,7 @@
                   onclick="toLightMode()"
                   title="Switch to light mode"
                   class="relative w-10 h-10 focus:outline-none focus:shadow-outline text-gray-500">
-                  <svg
-                    style="width: 24px; height: 24px"
-                    viewBox="0 0 24 24">
+                  <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
                     <path
                       fill="currentColor"
                       d="M17.75,4.09L15.22,6.03L16.13,9.09L13.5,7.28L10.87,9.09L11.78,6.03L9.25,4.09L12.44,4L13.5,1L14.56,4L17.75,4.09M21.25,11L19.61,12.25L20.2,14.23L18.5,13.06L16.8,14.23L17.39,12.25L15.75,11L17.81,10.95L18.5,9L19.19,10.95L21.25,11M18.97,15.95C19.8,15.87 20.69,17.05 20.16,17.8C19.84,18.25 19.5,18.67 19.08,19.07C15.17,23 8.84,23 4.94,19.07C1.03,15.17 1.03,8.83 4.94,4.93C5.34,4.53 5.76,4.17 6.21,3.85C6.96,3.32 8.14,4.21 8.06,5.04C7.79,7.9 8.75,10.87 10.95,13.06C13.14,15.26 16.1,16.22 18.97,15.95M17.33,17.97C14.5,17.81 11.7,16.64 9.53,14.5C7.36,12.31 6.2,9.5 6.04,6.68C3.23,9.82 3.34,14.64 6.35,17.66C9.37,20.67 14.19,20.78 17.33,17.97Z" />
@@ -411,9 +355,7 @@
                   onclick="toDarkMode()"
                   title="Switch to dark mode"
                   class="relative w-10 h-10 focus:outline-none focus:shadow-outline text-gray-500">
-                  <svg
-                    style="width: 24px; height: 24px"
-                    viewBox="0 0 24 24">
+                  <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
                     <path
                       fill="currentColor"
                       d="M12 2A10 10 0 0 0 2 12A10 10 0 0 0 12 22A10 10 0 0 0 22 12A10 10 0 0 0 12 2M12 4A8 8 0 0 1 20 12A8 8 0 0 1 12 20V4Z" />
@@ -433,21 +375,9 @@
                     fill="none"
                     stroke-linecap="round"
                     stroke-linejoin="round">
-                    <line
-                      x1="3"
-                      y1="12"
-                      x2="21"
-                      y2="12"></line>
-                    <line
-                      x1="3"
-                      y1="6"
-                      x2="21"
-                      y2="6"></line>
-                    <line
-                      x1="3"
-                      y1="18"
-                      x2="21"
-                      y2="18"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
                   </svg>
                   <svg
                     x-show="navIsOpen"
@@ -460,16 +390,8 @@
                     fill="none"
                     stroke-linecap="round"
                     stroke-linejoin="round">
-                    <line
-                      x1="18"
-                      y1="6"
-                      x2="6"
-                      y2="18"></line>
-                    <line
-                      x1="6"
-                      y1="6"
-                      x2="18"
-                      y2="18"></line>
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
                   </svg>
                 </button>
               </div>
@@ -493,8 +415,7 @@
               x-transition:leave="duration-100 ease-in"
               x-transition:leave-start="opacity-100 scale-100"
               x-transition:leave-end="opacity-0 -translate-y-8 scale-75">
-              <div
-                class="relative p-8 bg-white docs_sidebar dark:bg-dark-600">
+              <div class="relative p-8 bg-white docs_sidebar dark:bg-dark-600">
                 <!-- doc.navigator.start -->
                 <ul>
                   <li>
@@ -507,8 +428,8 @@
                         <a href="/docs/10.x/upgrade">Upgrade Guide</a>
                       </li>
                       <li>
-                        <a
-                          href="/docs/10.x/contributions">Contribution Guide</a>
+                        <a href="/docs/10.x/contributions">Contribution
+                          Guide</a>
                       </li>
                     </ul>
                   </li>
@@ -516,12 +437,10 @@
                     <h2>Getting Started</h2>
                     <ul>
                       <li class="active">
-                        <a
-                          href="/docs/10.x/installation">Installation</a>
+                        <a href="/docs/10.x/installation">Installation</a>
                       </li>
                       <li>
-                        <a
-                          href="/docs/10.x/configuration">Configuration</a>
+                        <a href="/docs/10.x/configuration">Configuration</a>
                       </li>
                       <li>
                         <a href="/docs/10.x/structure">Directory Structure</a>
@@ -530,8 +449,7 @@
                         <a href="/docs/10.x/frontend">Frontend</a>
                       </li>
                       <li>
-                        <a
-                          href="/docs/10.x/starter-kits">Starter Kits</a>
+                        <a href="/docs/10.x/starter-kits">Starter Kits</a>
                       </li>
                       <li>
                         <a href="/docs/10.x/deployment">Deployment</a>
@@ -569,8 +487,7 @@
           <div class="max-w-screen-lg px-8 sm:px-16 lg:px-24">
             <div
               class="flex flex-col items-end border-b border-gray-200 py-1 transition-colors dark:border-gray-700 lg:mt-8 lg:flex-row-reverse">
-              <div
-                class="hidden lg:flex items-center justify-center ml-8">
+              <div class="hidden lg:flex items-center justify-center ml-8">
                 <button
                   id="header__sun"
                   onclick="toSystemMode()"
@@ -587,10 +504,7 @@
                     fill="none"
                     stroke-linecap="round"
                     stroke-linejoin="round">
-                    <path
-                      stroke="none"
-                      d="M0 0h24v24H0z"
-                      fill="none"></path>
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                     <circle cx="12" cy="12" r="4"></circle>
                     <path
                       d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
@@ -601,9 +515,7 @@
                   onclick="toLightMode()"
                   title="Switch to light mode"
                   class="relative w-10 h-10 focus:outline-none focus:shadow-outline text-gray-500">
-                  <svg
-                    style="width: 24px; height: 24px"
-                    viewBox="0 0 24 24">
+                  <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
                     <path
                       fill="currentColor"
                       d="M17.75,4.09L15.22,6.03L16.13,9.09L13.5,7.28L10.87,9.09L11.78,6.03L9.25,4.09L12.44,4L13.5,1L14.56,4L17.75,4.09M21.25,11L19.61,12.25L20.2,14.23L18.5,13.06L16.8,14.23L17.39,12.25L15.75,11L17.81,10.95L18.5,9L19.19,10.95L21.25,11M18.97,15.95C19.8,15.87 20.69,17.05 20.16,17.8C19.84,18.25 19.5,18.67 19.08,19.07C15.17,23 8.84,23 4.94,19.07C1.03,15.17 1.03,8.83 4.94,4.93C5.34,4.53 5.76,4.17 6.21,3.85C6.96,3.32 8.14,4.21 8.06,5.04C7.79,7.9 8.75,10.87 10.95,13.06C13.14,15.26 16.1,16.22 18.97,15.95M17.33,17.97C14.5,17.81 11.7,16.64 9.53,14.5C7.36,12.31 6.2,9.5 6.04,6.68C3.23,9.82 3.34,14.64 6.35,17.66C9.37,20.67 14.19,20.78 17.33,17.97Z" />
@@ -614,9 +526,7 @@
                   onclick="toDarkMode()"
                   title="Switch to dark mode"
                   class="relative w-10 h-10 focus:outline-none focus:shadow-outline text-gray-500">
-                  <svg
-                    style="width: 24px; height: 24px"
-                    viewBox="0 0 24 24">
+                  <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
                     <path
                       fill="currentColor"
                       d="M12 2A10 10 0 0 0 2 12A10 10 0 0 0 12 22A10 10 0 0 0 22 12A10 10 0 0 0 12 2M12 4A8 8 0 0 1 20 12A8 8 0 0 1 12 20V4Z" />
@@ -637,17 +547,9 @@
                       class="appearance-none flex-1 w-full px-0 py-1 placeholder-gray-900 tracking-wide bg-white focus:outline-none dark:bg-dark-700 dark:text-gray-400 dark:placeholder-gray-500"
                       @change="window.location = $event.target.value">
                       <!-- version.options.start -->
-                      <option value="/master/artisan">
-                        master
-                      </option>
-                      <option value="/11.x/artisan">
-                        11.x
-                      </option>
-                      <option
-                        value="/10.x/artisan"
-                        selected>
-                        10.x
-                      </option>
+                      <option value="/master/artisan">master</option>
+                      <option value="/11.x/artisan">11.x</option>
+                      <option value="/10.x/artisan" selected>10.x</option>
                       <!-- version.options.end -->
                     </select>
                     <img
@@ -683,9 +585,8 @@
                   <blockquote>
                     <p>
                       [!NOTE]<br />
-                      Before getting started, be sure to
-                      configure a database connection in
-                      your application's
+                      Before getting started, be sure to configure a database
+                      connection in your application's
                       <code>config/database.php</code>
                       configuration file.
                     </p>
@@ -701,11 +602,9 @@
                   <p><a name="introduction"></a></p>
                   <h2>Code</h2>
                   <p>
-                    Artisan exists at the root of your
-                    application as the
-                    <code>artisan</code> script and provides
-                    a number of helpful commands that can
-                    assist you while you build your
+                    Artisan exists at the root of your application as the
+                    <code>artisan</code> script and provides a number of helpful
+                    commands that can assist you while you build your
                     application:
                   </p>
                   <p>Shell:</p>
@@ -752,15 +651,11 @@
                         </button>
                       </div>
                       <div class="tabbed-code-body">
-                        <div
-                          class="code-container active"
-                          data-tab="Vue">
+                        <div class="code-container active" data-tab="Vue">
                           <pre><code class="language-vue">//
                                             </code></pre>
                         </div>
-                        <div
-                          class="code-container"
-                          data-tab="React">
+                        <div class="code-container" data-tab="React">
                           <pre><code class="language-javascript">//
                                             </code></pre>
                         </div>
@@ -791,17 +686,15 @@
           </a>
         </div>
 
-        <div
-          class="mt-6 grid grid-cols-12 md:gap-x-8 gap-y-12 sm:mt-12">
+        <div class="mt-6 grid grid-cols-12 md:gap-x-8 gap-y-12 sm:mt-12">
           <div class="col-span-12 lg:col-span-4">
             <p
               class="max-w-sm text-xs text-gray-700 sm:text-sm dark:text-gray-500">
-              Laravel is a web application framework with
-              expressive, elegant syntax. We believe development
-              must be an enjoyable and creative experience to be
-              truly fulfilling. Laravel attempts to take the pain
-              out of development by easing common tasks used in
-              most web projects.
+              Laravel is a web application framework with expressive, elegant
+              syntax. We believe development must be an enjoyable and creative
+              experience to be truly fulfilling. Laravel attempts to take the
+              pain out of development by easing common tasks used in most web
+              projects.
             </p>
             <ul class="mt-6 flex items-center space-x-3">
               <li>
@@ -882,8 +775,7 @@
           <div class="text-xs col-span-6 md:col-span-3 lg:col-span-2">
             <span class="uppercase dark:text-gray-200">Open Sources</span>
             <div class="mt-5">
-              <ul
-                class="space-y-3 text-gray-700 dark:text-gray-500">
+              <ul class="space-y-3 text-gray-700 dark:text-gray-500">
                 <li>
                   <a
                     href="https://github.com/cable8mm/xeed"
@@ -909,8 +801,7 @@
           <div class="text-xs col-span-6 md:col-span-3 lg:col-span-2">
             <span class="uppercase dark:text-gray-200">Open Sources</span>
             <div class="mt-5">
-              <ul
-                class="space-y-3 text-gray-700 dark:text-gray-500">
+              <ul class="space-y-3 text-gray-700 dark:text-gray-500">
                 <li>
                   <a
                     href="https://github.com/cable8mm/xeed"
@@ -936,8 +827,7 @@
           <div class="text-xs col-span-6 md:col-span-3 lg:col-span-2">
             <span class="uppercase dark:text-gray-200">Open Sources</span>
             <div class="mt-5">
-              <ul
-                class="space-y-3 text-gray-700 dark:text-gray-500">
+              <ul class="space-y-3 text-gray-700 dark:text-gray-500">
                 <li>
                   <a
                     href="https://github.com/cable8mm/xeed"
@@ -963,8 +853,7 @@
           <div class="text-xs col-span-6 md:col-span-3 lg:col-span-2">
             <span class="uppercase dark:text-gray-200">Open Sources</span>
             <div class="mt-5">
-              <ul
-                class="space-y-3 text-gray-700 dark:text-gray-500">
+              <ul class="space-y-3 text-gray-700 dark:text-gray-500">
                 <li>
                   <a
                     href="https://github.com/cable8mm/xeed"
@@ -1005,10 +894,10 @@
     </footer>
 
     <script>
-            var algolia_app_id = "";
-            var algolia_search_key = "";
-            var version = "{{ version }}";
-        </script>
+      var algolia_app_id = "";
+      var algolia_search_key = "";
+      var version = "{{ version }}";
+    </script>
     <div class="fixed">
       <input type="text" />
     </div>

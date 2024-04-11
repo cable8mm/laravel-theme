@@ -573,14 +573,17 @@
               </div>
             </div>
 
-            <section class="mt-8 md:mt-16">
-              <section class="docs_main max-w-prose">
+            <section class="grid grid-cols-3 gap-4 mt-8 md:mt-16">
+              <section class="docs_main max-w-prose col-span-2">
                 <div id="main-content">
                   <!-- doc.content.start -->
                   <h1>Title</h1>
 
                   <p><a name="alert"></a></p>
                   <h2>Alert</h2>
+
+                  <p><a name="alert-note"></a></p>
+                  <h3>Note</h3>
 
                   <blockquote>
                     <p>
@@ -592,6 +595,9 @@
                     </p>
                   </blockquote>
 
+                  <p><a name="alert-warning"></a></p>
+                  <h3>Warning</h3>
+
                   <blockquote>
                     <p>
                       [!WARNING]<br />
@@ -599,7 +605,7 @@
                     </p>
                   </blockquote>
 
-                  <p><a name="introduction"></a></p>
+                  <p><a name="code"></a></p>
                   <h2>Code</h2>
                   <p>
                     Artisan exists at the root of your application as the
@@ -631,6 +637,10 @@
                   <div class="code-container">
                     <pre><code data-theme="olaolu-palenight" data-lang="js" class="torchlight" style="background-color: #292D3E; --theme-selection-background: #7580B850;" id="clipText-15"><!-- Syntax highlighted by torchlight.dev --><div class="line"><span style="color: #C792EA;">import</span><span style="color: #BFC7D5;"> { defineConfig } </span><span style="color: #C792EA;">from</span><span style="color: #BFC7D5;"> </span><span style="color: #D9F5DD;">'</span><span style="color: #C3E88D;">vite</span><span style="color: #D9F5DD;">'</span><span style="color: #BFC7D5;">;</span></div><div class="line"><span style="color: #C792EA;">import</span><span style="color: #BFC7D5;"> laravel </span><span style="color: #C792EA;">from</span><span style="color: #BFC7D5;"> </span><span style="color: #D9F5DD;">'</span><span style="color: #C3E88D;">laravel-vite-plugin</span><span style="color: #D9F5DD;">'</span><span style="color: #BFC7D5;">;</span></div><div class="line">&nbsp;</div><div class="line"><span style="color: #C792EA;">export</span><span style="color: #BFC7D5;"> </span><span style="color: #C792EA;">default</span><span style="color: #BFC7D5;"> </span><span style="color: #82AAFF;">defineConfig</span><span style="color: #BFC7D5;">({</span></div><div class="line"><span style="color: #BFC7D5;">    plugins: [</span></div><div class="line"><span style="color: #BFC7D5;">        </span><span style="color: #82AAFF;">laravel</span><span style="color: #BFC7D5;">([</span><span style="color: #D9F5DD;">'</span><span style="color: #C3E88D;">resources/ts/app.tsx</span><span style="color: #D9F5DD;">'</span><span style="color: #BFC7D5;">]),</span></div><div class="line"><span style="color: #BFC7D5;">    ],</span></div><div class="line"><span style="color: #BFC7D5;">    resolve: {</span></div><div class="line"><span style="color: #BFC7D5;">        alias: {</span></div><div class="line"><span style="color: #BFC7D5;">            </span><span style="color: #D9F5DD;">'</span><span style="color: #C3E88D;">@</span><span style="color: #D9F5DD;">'</span><span style="color: #BFC7D5;">: </span><span style="color: #D9F5DD;">'</span><span style="color: #C3E88D;">/resources/ts</span><span style="color: #D9F5DD;">'</span><span style="color: #BFC7D5;">,</span></div><div class="line"><span style="color: #BFC7D5;">        },</span></div><div class="line"><span style="color: #BFC7D5;">    },</span></div><div class="line"><span style="color: #BFC7D5;">});</span></div></code></pre>
                   </div>
+
+                  <p><a name="group"></a></p>
+                  <h2>Group</h2>
+
                   <p>Group:</p>
                   <div class="code-container">
                     <div
@@ -662,10 +672,95 @@
                       </div>
                     </div>
                   </div>
-
                   <!-- doc.content.end -->
                 </div>
               </section>
+              <!-- nav.content.start -->
+              <div class="autodoc sticky top-0 px-8" data-autotoc>
+                <!--
+                <h5
+                  class="text-slate-900 font-semibold mb-4 text-sm leading-6 dark:text-slate-100">On
+                  this page
+                </h5>
+                <ul class="text-slate-700 text-sm leading-6">
+                  <li>
+                    <a
+                      href="#class-reference"
+                      class="block py-1 font-medium text-sky-500 dark:text-sky-400">
+                      Quick reference
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#basic-usage"
+                      class="block py-1 font-medium hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300">Basic
+                      usage
+                    </a>
+                  </li>
+                  <li class="ml-4">
+                    <a href="#spanning-columns"
+                      class="group flex items-start py-1 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300">
+                      <svg
+                        width="3" height="24" viewBox="0 -9 3 24"
+                        class="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-slate-500">
+                        <path
+                          d="M0 0L3 3L0 6" fill="none" stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round">
+                        </path>
+                      </svg>Spanning columns
+                    </a>
+                  </li>
+                  <li class="ml-4"><a
+                      href="#starting-and-ending-lines"
+                      class="group flex items-start py-1 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"><svg
+                        width="3" height="24" viewBox="0 -9 3 24"
+                        class="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-slate-500"><path
+                          d="M0 0L3 3L0 6" fill="none" stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round">
+                        </path>
+                      </svg>Starting and ending lines
+                    </a>
+                  </li>
+                  <li><a href="#applying-conditionally"
+                      class="block py-1 font-medium hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300">Applying
+                      conditionally</a></li><li class="ml-4"><a
+                      href="#hover-focus-and-other-states"
+                      class="group flex items-start py-1 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"><svg
+                        width="3" height="24" viewBox="0 -9 3 24"
+                        class="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-slate-500"><path
+                          d="M0 0L3 3L0 6" fill="none" stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"></path></svg>Hover, focus, and
+                      other states</a></li><li class="ml-4"><a
+                      href="#breakpoints-and-media-queries"
+                      class="group flex items-start py-1 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"><svg
+                        width="3" height="24" viewBox="0 -9 3 24"
+                        class="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-slate-500"><path
+                          d="M0 0L3 3L0 6" fill="none" stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"></path></svg>Breakpoints and
+                      media queries</a></li><li><a href="#using-custom-values"
+                      class="block py-1 font-medium hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300">Using
+                      custom values</a></li><li class="ml-4"><a
+                      href="#customizing-your-theme"
+                      class="group flex items-start py-1 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"><svg
+                        width="3" height="24" viewBox="0 -9 3 24"
+                        class="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-slate-500"><path
+                          d="M0 0L3 3L0 6" fill="none" stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"></path></svg>Customizing your
+                      theme</a></li><li class="ml-4"><a href="#arbitrary-values"
+                      class="group flex items-start py-1 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"><svg
+                        width="3" height="24" viewBox="0 -9 3 24"
+                        class="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-slate-500"><path
+                          d="M0 0L3 3L0 6" fill="none" stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"></path></svg>Arbitrary
+                      values</a></li></ul>
+                      -->
+              </div>
+              <!-- nav.content.end -->
             </section>
           </div>
         </section>

@@ -6,7 +6,7 @@ const parseHeadings = headings => {
 
     return {
       tag: `${heading.tagName}`,
-      href: `${a.href}`,
+      href: `${a.href.replace(/.+#/g, '#')}`,
       text: a.textContent.trim()
     }
   })

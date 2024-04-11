@@ -9,28 +9,28 @@ replaceBlockquotesWithCalloutsInDocs()
 highlightSupportPolicyTable()
 
 function wrapHeadingsInAnchors() {
-  ;[
-    ...document.querySelector('.docs_main').querySelectorAll('a[name]')
-  ].forEach(anchor => {
-    const heading = anchor.parentNode.nextElementSibling
-    heading.id = anchor.name
-    anchor.href = `#${anchor.name}`
-    anchor.removeAttribute('name');
-    [...heading.childNodes].forEach(node => anchor.appendChild(node))
-    heading.appendChild(anchor)
-  })
+  [...document.querySelector('.docs_main').querySelectorAll('a[name]')].forEach(
+    (anchor) => {
+      const heading = anchor.parentNode.nextElementSibling
+      heading.id = anchor.name
+      anchor.href = `#${anchor.name}`
+      anchor.removeAttribute('name');
+      [...heading.childNodes].forEach((node) => anchor.appendChild(node))
+      heading.appendChild(anchor)
+    }
+  )
 }
 
 function setupNavCurrentLinkHandling() {
   // Can return two, one for mobile nav and one for desktop nav
-  ;[...document.querySelectorAll('.docs_sidebar ul')].forEach(nav => {
+  [...document.querySelectorAll('.docs_sidebar ul')].forEach((nav) => {
     const pathLength = window.location.pathname.split('/').length
     const current = nav.querySelector(
       'li a[href="' +
-      (pathLength === 3
-        ? window.location.pathname + '/installation'
-        : window.location.pathname) +
-      '"]'
+        (pathLength === 3
+          ? window.location.pathname + '/installation'
+          : window.location.pathname) +
+        '"]'
     )
 
     if (current) {
@@ -38,12 +38,12 @@ function setupNavCurrentLinkHandling() {
       current.parentNode.classList.add('active')
     }
   });
-  [...document.querySelectorAll('.docs_sidebar h2')].forEach(el => {
-    el.addEventListener('click', e => {
+  [...document.querySelectorAll('.docs_sidebar h2')].forEach((el) => {
+    el.addEventListener('click', (e) => {
       e.preventDefault()
 
       const active = el.parentNode.classList.contains('sub--on');
-      [...document.querySelectorAll('.docs_sidebar ul li')].forEach(el =>
+      [...document.querySelectorAll('.docs_sidebar ul li')].forEach((el) =>
         el.classList.remove('sub--on')
       )
 
@@ -55,9 +55,9 @@ function setupNavCurrentLinkHandling() {
 }
 
 function replaceBlockquotesWithCalloutsInDocs() {
-  ;[...document.querySelectorAll('.docs_main blockquote p')].forEach(el => {
+  [...document.querySelectorAll('.docs_main blockquote p')].forEach((el) => {
     // Legacy Laravel styled notes...
-    replaceBlockquote(el, /\{(.*?)\}/, type => {
+    replaceBlockquote(el, /\{(.*?)\}/, (type) => {
       switch (type) {
         case 'note':
           return ['/img/callouts/exclamation.min.svg', 'bg-red-600']
@@ -73,7 +73,7 @@ function replaceBlockquotesWithCalloutsInDocs() {
 
     // GitHub styled notes...
     // eslint-disable-next-line no-useless-escape
-    replaceBlockquote(el, /\[\!(.*?)\](?:<br>\n?)?/, type => {
+    replaceBlockquote(el, /\[\!(.*?)\](?:<br>\n?)?/, (type) => {
       switch (type) {
         case 'WARNING':
           return ['/img/callouts/exclamation.min.svg', 'bg-red-600']
@@ -84,8 +84,8 @@ function replaceBlockquotesWithCalloutsInDocs() {
       }
     })
 
-    // Legagcy GitHub styled notes...
-    replaceBlockquote(el, /<strong>(.*?)<\/strong>(?:<br>\n?)?/, type => {
+    // Legacy GitHub styled notes...
+    replaceBlockquote(el, /<strong>(.*?)<\/strong>(?:<br>\n?)?/, (type) => {
       switch (type) {
         case 'Warning':
           return ['/img/callouts/exclamation.min.svg', 'bg-red-600']
@@ -109,7 +109,7 @@ function replaceBlockquote(el, regex, getImageAndColorByType) {
   }
 
   if (type) {
-    ;[img, color] = getImageAndColorByType(type)
+    [img, color] = getImageAndColorByType(type)
 
     if (img === null && color === null) {
       return
@@ -150,10 +150,7 @@ function highlightSupportPolicyTable() {
 
         if (currentDate > securityDateCell) {
           // End of life.
-          versionCell.classList.add(
-            'bg-red-500',
-            'support-policy-highlight'
-          )
+          versionCell.classList.add('bg-red-500', 'support-policy-highlight')
         } else if (
           currentDate <= securityDateCell &&
           currentDate > bugDateCell

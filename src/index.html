@@ -573,8 +573,10 @@
               </div>
             </div>
 
-            <section class="grid grid-cols-3 gap-4 mt-8 md:mt-16">
-              <section class="docs_main max-w-prose col-span-2">
+            <section
+              class="md:grid md:grid-cols-3 md:gap-4 lg:grid-cols-1 lg:gap-0 xl:grid-cols-3 xl:gap-4  mt-8 md:mt-16">
+              <section
+                class="docs_main max-w-prose md:col-span-2 lg:col-auto xl:col-span-2">
                 <div id="main-content">
                   <!-- doc.content.start -->
                   <h1>Title</h1>
@@ -675,11 +677,12 @@
                   <!-- doc.content.end -->
                 </div>
               </section>
-              <!-- nav.content.start -->
-              <div class="autodoc sticky top-0 px-8" data-autotoc>
+              <!-- toc.content.start -->
+              <div class="autodoc sticky top-0 md:px-8 lg:px-0 xl:px-8"
+                data-autotoc>
                 <!--
                 <h5
-                  class="text-slate-900 font-semibold mb-4 text-sm leading-6 dark:text-slate-100">On
+                  class="text-gray-500 font-semibold mb-4 text-sm leading-6">On
                   this page
                 </h5>
                 <ul class="text-slate-700 text-sm leading-6">
@@ -760,7 +763,7 @@
                       values</a></li></ul>
                       -->
               </div>
-              <!-- nav.content.end -->
+              <!-- toc.content.end -->
             </section>
           </div>
         </section>

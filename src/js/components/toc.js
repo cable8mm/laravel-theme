@@ -44,10 +44,10 @@ const initialize = () => {
 
   const tocDOM = `
 <h5
-  class="text-slate-900 font-semibold mb-4 text-sm leading-6 dark:text-slate-100">On
+  class="text-gray-500 font-semibold mb-4 text-sm leading-6 md:text-sm lg:text-lg xl:text-sm">On
   this page
 </h5>
-<ul class="text-slate-700 text-sm leading-6">${tocHTML}
+<ul class="text-gray-500 text-sm leading-6">${tocHTML}
 </ul>
 `
 

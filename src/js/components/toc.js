@@ -33,7 +33,7 @@ const generateTOCList = (headings) => {
     .join('')
 }
 
-const initialize = () => {
+const initialize = async () => {
   const container = getContainer()
   const headings = getHeadings()
 
@@ -54,7 +54,7 @@ const initialize = () => {
 
   container.innerHTML = tocDOM
 
-  scrollspy()
+  await scrollspy()
 }
 
 initialize()

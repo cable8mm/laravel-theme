@@ -1,39 +1,38 @@
 #carbonads {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #F7F8FB;
-    z-index: 100;
-    box-shadow: 0 0 1px hsla(0, 0%, 0%, 0.25);
-    padding: .625em;
-    max-width: 130px;
-    box-sizing: content-box;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #f7f8fb;
+  z-index: 100;
+  box-shadow: 0 0 1px hsla(0, 0%, 0%, 0.25);
+  padding: 0.625em;
+  max-width: 130px;
+  box-sizing: content-box;
 
-    span {
-        display: block;
-    }
+  span {
+    display: block;
+  }
 
-    img {
-        display: block;
-        margin-bottom: .75em;
-    }
+  img {
+    display: block;
+    margin-bottom: 0.75em;
+  }
 
-    .carbon-text {
-        display: block;
-        font-size: .75em;
-        line-height: 1.4em;
-        color: theme('colors.gray.700');
-    }
+  .carbon-text {
+    display: block;
+    font-size: 0.75em;
+    line-height: 1.4em;
+    color: theme("colors.gray.700");
+  }
 
-    .carbon-poweredby {
-        font-size: .5em;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        line-height: 1;
-        color: theme('colors.gray.600');
-    }
+  .carbon-poweredby {
+    font-size: 0.5em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1;
+    color: theme("colors.gray.600");
+  }
 }
-
 
 @media only screen and (min-width: 320px) and (max-width: 1239px) {
   #carbonads {
@@ -46,52 +45,52 @@
     padding: 1em;
 
     .carbon-wrap {
-        display: flex;
-        flex-direction: row;
+      display: flex;
+      flex-direction: row;
     }
 
     img {
-        margin: 0 1em 0 0;
+      margin: 0 1em 0 0;
     }
 
     .carbon-text {
-        font-size: .825em;
-        margin-bottom: 1em;
+      font-size: 0.825em;
+      margin-bottom: 1em;
     }
 
     .carbon-poweredby {
-        position: absolute;
-        left: 162px;
-        bottom: 15px;
+      position: absolute;
+      left: 162px;
+      bottom: 15px;
     }
   }
 }
 
 @media only screen and (min-width: 320px) and (max-width: 429px) {
-    #carbonads {
-        .carbon-wrap {
-            flex-direction: column;
-        }
-
-        img {
-            margin: initial;
-            margin: 0 0 .5em 0;
-        }
-
-        .carbon-text {
-            margin-bottom: initial;
-        }
-
-        .carbon-poweredby {
-            position: initial;
-            left: initial;
-            right: initial;
-        }
+  #carbonads {
+    .carbon-wrap {
+      flex-direction: column;
     }
+
+    img {
+      margin: initial;
+      margin: 0 0 0.5em 0;
+    }
+
+    .carbon-text {
+      margin-bottom: initial;
+    }
+
+    .carbon-poweredby {
+      position: initial;
+      left: initial;
+      right: initial;
+    }
+  }
 }
 
 @media only print {
-    #carbonads {
-        display: none;
-    }
+  #carbonads {
+    display: none;
+  }
 }

@@ -57,4 +57,4 @@ const initialize = async () => {
   await scrollspy()
 }
 
-initialize()
+export default initialize

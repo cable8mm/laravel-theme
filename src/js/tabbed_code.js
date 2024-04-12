@@ -1,4 +1,4 @@
-function setTab(tab, group, save) {
+export default function setTab(tab, group, save) {
   save = typeof save === 'undefined' ? true : save
 
   document

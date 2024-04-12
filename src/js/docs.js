@@ -1,12 +1,15 @@
 import Prism from 'prismjs'
 
-import { toDarkMode, toLightMode, toSystemMode } from './components/theme'
+import Toc from './components/toc'
+
 Prism.manual = true
 
 wrapHeadingsInAnchors()
 setupNavCurrentLinkHandling()
 replaceBlockquotesWithCalloutsInDocs()
 highlightSupportPolicyTable()
+
+Toc()
 
 function wrapHeadingsInAnchors() {
   [...document.querySelector('.docs_main').querySelectorAll('a[name]')].forEach(
@@ -188,6 +191,3 @@ function highlightSupportPolicyTable() {
 function getCellDate(cell) {
   return Date.parse(cell.innerHTML.replace(/(\d+)(st|nd|rd|th)/, '$1'))
 }
-window.toDarkMode = toDarkMode
-window.toLightMode = toLightMode
-window.toSystemMode = toSystemMode
